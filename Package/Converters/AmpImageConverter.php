@@ -13,42 +13,32 @@ use Amplifier\Package\ConverterBaseTrait;
 use Amplifier\Package\ConverterException;
 use Amplifier\Package\ConverterInterface;
 
+/**
+ * Class AmpImageConverter
+ * @package Amplifier\Package\Converters
+ * @property array[]|string[] $AttributeMapping
+ * @property \DOMDocument $Doc
+ * @mixin ConverterBaseTrait
+ */
 class AmpImageConverter implements ConverterInterface
 {
     use ConverterBaseTrait;
-
-    protected static $aAttributeMapping = [
-        "src" => "/^(\/\/|https?:\/\/|\/)/",
-        "alt" => "/.*/",
-    ];
-
-    public function setAttributes(array $aInput): ConverterInterface
-    {
-        foreach ($aInput as $sKey => $sValue) {
-            if(empty($sValue) || !is_scalar($sValue) || is_array($sValue)){
-                throw new ConverterException("An invalid value has been given for key {$sKey}!");
-            }
-
-            if(array_key_exists($sKey, self::$aAttributeMapping)) {
-                $mCheck = self::$aAttributeMapping[$sKey];
-                if(is_array($mCheck) && !in_array($sValue, $mCheck)) {
-                    throw new ConverterException("Attribute {$sKey} was given a value of {$sValue}, while only the ".
-                        "following values were allowed: ".implode(", ", $mCheck));
-                } elseif (!preg_match($mCheck, $sValue)) {
-                    throw new ConverterException("Attribute {$sKey} was given a value of {$sValue}, which did not ".
-                        "match the following regular expression: \"{$mCheck}\"");
-                }
-            }
-
-
-        }
-    }
-
+    /** {@inheritdoc} */
     public function convert(): ConverterInterface
     {
-        $oNoScript = new \DOMElement("noscript");
-        $oNoScript->set
+        $oImg = $this->Doc->firstChild;
 
+        $oNoScript = new \DOMElement("noscript");
+        $oNoScript->setAttribute("fallback", "");
+        $oNoScript->appendChild($oImg);
+
+        $oAmpImg = new \DOMElement("amp-img");
+        foreach ($this->Attributes as $sName => $sValue) {
+            $oAmpImg->setAttribute($sName, $sValue);
+        }
+
+        $this->Doc->loadHTML("");
+        $this->Doc->appendChild($oAmpImg);
         return $this;
     }
 

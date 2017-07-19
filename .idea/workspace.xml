@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b757ad-3b36-42ec-a361-333344ed0db5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Package/ConverterBaseTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Package/ConverterException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Package/Converters/AmpImageConverter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Package/ConverterBaseTrait.php" afterPath="$PROJECT_DIR$/Package/ConverterBaseTrait.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Package/ConverterException.php" afterPath="$PROJECT_DIR$/Package/ConverterException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Package/ConverterInterface.php" afterPath="$PROJECT_DIR$/Package/ConverterInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Package/Converters/AmpImageConverter.php" afterPath="$PROJECT_DIR$/Package/Converters/AmpImageConverter.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AmpImageConverter.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AmpImageConverter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Package/Converters/AmpImageConverter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="760">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#130#171#0#PHP" expanded="true" />
               </folding>
@@ -58,9 +56,26 @@
       <file leaf-file-name="ConverterBaseTrait.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Package/ConverterBaseTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="740">
+              <caret line="110" column="7" lean-forward="false" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+              <folding>
+                <element signature="e#244#345#0#PHP" expanded="false" />
+                <element signature="e#395#472#0#PHP" expanded="false" />
+                <element signature="e#479#589#0#PHP" expanded="false" />
+                <element signature="e#641#649#0#PHP" expanded="false" />
+                <element signature="e#656#803#0#PHP" expanded="false" />
+                <element signature="e#829#904#0#PHP" expanded="false" />
+                <element signature="e#942#1018#0#PHP" expanded="false" />
+                <element signature="e#1023#1682#0#PHP" expanded="false" />
+                <element signature="e#1688#1804#0#PHP" expanded="false" />
+                <element signature="e#1809#1894#0#PHP" expanded="false" />
+                <element signature="e#1900#1968#0#PHP" expanded="false" />
+                <element signature="e#1973#2084#0#PHP" expanded="false" />
+                <element signature="e#2090#2212#0#PHP" expanded="false" />
+                <element signature="e#2217#2348#0#PHP" expanded="false" />
+                <element signature="e#2354#2499#0#PHP" expanded="false" />
+                <element signature="e#2504#3585#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,9 +83,11 @@
       <file leaf-file-name="ConverterInterface.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Package/ConverterInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+              <folding>
+                <element signature="e#318#396#0#PHP" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,6 +104,14 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>self::$aAttributeMapping</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$this-&gt;AttributeMapping</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -98,9 +123,9 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/Amplifier.php" />
         <option value="$PROJECT_DIR$/Package/ConverterBaseTrait.php" />
-        <option value="$PROJECT_DIR$/Package/ConverterException.php" />
-        <option value="$PROJECT_DIR$/Package/ConverterInterface.php" />
         <option value="$PROJECT_DIR$/Package/Converters/AmpImageConverter.php" />
+        <option value="$PROJECT_DIR$/Package/ConverterInterface.php" />
+        <option value="$PROJECT_DIR$/Package/ConverterException.php" />
       </list>
     </option>
   </component>
@@ -288,12 +313,12 @@
       <option name="presentableId" value="Default" />
       <updated>1500403120105</updated>
       <workItem from="1500404819602" duration="406000" />
-      <workItem from="1500405235927" duration="4069000" />
+      <workItem from="1500405235927" duration="5600000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4475000" />
+    <option name="totallyTimeSpent" value="6006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -367,16 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Amplifier.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="784">
@@ -387,19 +402,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Package/ConverterInterface.php">
+    <entry file="file://$PROJECT_DIR$/Package/ConverterBaseTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="740">
+          <caret line="110" column="7" lean-forward="false" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+          <folding>
+            <element signature="e#244#345#0#PHP" expanded="false" />
+            <element signature="e#395#472#0#PHP" expanded="false" />
+            <element signature="e#479#589#0#PHP" expanded="false" />
+            <element signature="e#641#649#0#PHP" expanded="false" />
+            <element signature="e#656#803#0#PHP" expanded="false" />
+            <element signature="e#829#904#0#PHP" expanded="false" />
+            <element signature="e#942#1018#0#PHP" expanded="false" />
+            <element signature="e#1023#1682#0#PHP" expanded="false" />
+            <element signature="e#1688#1804#0#PHP" expanded="false" />
+            <element signature="e#1809#1894#0#PHP" expanded="false" />
+            <element signature="e#1900#1968#0#PHP" expanded="false" />
+            <element signature="e#1973#2084#0#PHP" expanded="false" />
+            <element signature="e#2090#2212#0#PHP" expanded="false" />
+            <element signature="e#2217#2348#0#PHP" expanded="false" />
+            <element signature="e#2354#2499#0#PHP" expanded="false" />
+            <element signature="e#2504#3585#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Package/ConverterBaseTrait.php">
+    <entry file="file://$PROJECT_DIR$/Package/ConverterInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <folding>
+            <element signature="e#318#396#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -413,10 +447,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Package/Converters/AmpImageConverter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        <state relative-caret-position="760">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#130#171#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#86#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

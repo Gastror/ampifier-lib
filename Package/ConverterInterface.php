@@ -14,5 +14,10 @@ interface ConverterInterface
     public function getOutput() : string;
     public function setInput(string $sString) : ConverterInterface;
     public function getDOMDocument() : \DOMDocument;
+
+    /**
+     * Converts the stored HTML.
+     * @return ConverterInterface
+     */
     public function convert() : ConverterInterface;
 }
