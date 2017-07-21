@@ -12,6 +12,7 @@ namespace Amplifier\Package;
  * Trait ConverterBaseTrait
  * @package Amplifier\Package
  * @mixin ConverterInterface
+ * @property string[]|array[] Attributes
  */
 trait ConverterBaseTrait
 {
@@ -42,13 +43,6 @@ trait ConverterBaseTrait
      * @var \DOMDocument
      */
     protected $Doc;
-
-    /**
-     * Storage for defined attributes.
-     *
-     * @var array
-     */
-    protected $Attributes = [];
 
     /**
      * Non-default mapping for attributes.

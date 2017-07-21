@@ -20,6 +20,10 @@ use Amplifier\Package\ConverterInterface;
  */
 class AmpImageConverter implements ConverterInterface
 {
+    protected $Attributes = [
+        "layout" => "container"
+    ];
+
     use ConverterBaseTrait;
     /** {@inheritdoc} */
     public function convert(): ConverterInterface
