@@ -22,7 +22,7 @@ trait ConverterBaseTrait
      * @var array
      */
     protected static $aDefaultAttributeMapping = [
-        "src" => "/^(\/\/|https?:\/\/|\/)/",
+        "src" => "/^(https?:\/\/|\/)/",
         "alt" => "/.*/",
     ];
 
@@ -101,7 +101,7 @@ trait ConverterBaseTrait
     public function getOutput(): string
     {
         $this->convert();
-        return preg_replace("/<\?.+?\?>/", "", $this->Doc->saveXML());
+        return preg_replace("/<\?.+?\?>[^a-zA-Z0-9\-_]/", "", $this->Doc->saveXML());
     }
 
     /**
@@ -126,6 +126,7 @@ trait ConverterBaseTrait
     public function setAttributes(array $aInput): ConverterInterface
     {
         foreach ($aInput as $sKey => $sValue) {
+
             if(empty($sValue) || !is_scalar($sValue) || is_array($sValue)){
                 throw new ConverterException("An invalid value has been given for key {$sKey}!");
             }
@@ -157,8 +158,9 @@ trait ConverterBaseTrait
     private function _extractAttributes(\DOMNode $oElement) : int {
         $nC = 0;
         if($oElement->hasAttributes()) {
-            foreach($oElement->attributes as $sKey => $sValue) {
-                $this->setAttributes([$sKey => $sValue]);
+            foreach($oElement->attributes as $oValue) {
+                /** @var \DOMAttr $oValue */
+                $this->setAttributes([$oValue->name => $oValue->value]);
                 $nC++;
             }
         }
