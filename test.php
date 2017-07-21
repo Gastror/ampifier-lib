@@ -7,4 +7,5 @@
  */
 
 include "Amplifier.php";
-new \Amplifier\Amp();
+$oAmp = new \Amplifier\Amp();
+echo $oAmp->Image->setInput("<img src='http://lorempixel.nl/480/320/' alt='Lorem pixel plaatje'/>")->getOutput();

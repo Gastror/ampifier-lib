@@ -51,6 +51,14 @@ trait ConverterBaseTrait
     protected $Attributes = [];
 
     /**
+     * Non-default mapping for attributes.
+     * Should not be set in trait, only here for convenience.
+     *
+     * @var array
+     */
+    protected $AttributeMapping;
+
+    /**
      * ConverterBaseTrait constructor. Should not be overridden.
      */
     public function __construct()
@@ -93,7 +101,7 @@ trait ConverterBaseTrait
     public function getOutput(): string
     {
         $this->convert();
-        return $this->Doc->saveXML();
+        return preg_replace("/<\?.+?\?>/", "", $this->Doc->saveXML());
     }
 
     /**
@@ -104,7 +112,7 @@ trait ConverterBaseTrait
      */
     public function setInput(string $sHTML): ConverterInterface
     {
-        $this->Doc->loadHTML($sHTML);
+        $this->Doc->loadHTML($sHTML,  LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         return $this;
     }
 
@@ -135,5 +143,25 @@ trait ConverterBaseTrait
 
             $this->Attributes[$sKey] = $sValue;
         }
+
+        return $this;
+    }
+
+    /**
+     * Set extract attributes from an element and set it to the buffer.
+     * Returns count of elements set.
+     *
+     * @param \DOMElement $oElement
+     * @return int
+     */
+    private function _extractAttributes(\DOMNode $oElement) : int {
+        $nC = 0;
+        if($oElement->hasAttributes()) {
+            foreach($oElement->attributes as $sKey => $sValue) {
+                $this->setAttributes([$sKey => $sValue]);
+                $nC++;
+            }
+        }
+        return $nC;
     }
 }

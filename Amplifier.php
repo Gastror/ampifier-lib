@@ -10,7 +10,13 @@ namespace Amplifier;
 
 use Amplifier\Package\ConverterException;
 use Amplifier\Package\ConverterInterface;
+use Amplifier\Package\Converters\AmpImageConverter;
 
+/**
+ * Class Amp
+ * @package Amplifier
+ * @property AmpImageConverter $Image
+ */
 class Amp
 {
     const CONVERTER_CLASS_DIR = "Converters";
@@ -20,8 +26,11 @@ class Amp
     {
         spl_autoload_register(function($sClassName){
             $sClassName = preg_replace("/^Amplifier\\\/", "", $sClassName);
-            $sClassName = str_replace("\\", DIRECTORY_SEPARATOR, $sClassName);
-            require_once $sClassName . ".php";
+            $sDirname = str_replace("\\", DIRECTORY_SEPARATOR, $sClassName);
+            if(file_exists($sDirname . ".php"))
+            {
+                require_once "{$sDirname}.php";
+            }
         });
 
         $sPackageDir = __DIR__ . DIRECTORY_SEPARATOR . self::PACKAGE_DIR . DIRECTORY_SEPARATOR;
@@ -32,7 +41,7 @@ class Amp
                 continue;
 
             $sBasename = basename($sFile, ".php");
-            $sPropertyName = preg_replace("/(^Amp|Converter$)/", "", basename($sFile));
+            $sPropertyName = preg_replace("/(^Amp|Converter$)/", "", basename($sFile, ".php"));
             $sNamespacedName = "\\Amplifier\\Package\\Converters\\{$sBasename}";
             $this->{$sPropertyName} = new $sNamespacedName();
             $oConverter =& $this->{$sPropertyName};
