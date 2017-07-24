@@ -20,7 +20,10 @@ use Amplifier\Package\ConverterInterface;
  */
 class AmpAudioConverter implements ConverterInterface
 {
-    protected $Attributes = [];
+    protected $Attributes = [
+        "height" => "50",
+        "width" => "auto"
+    ];
 
     use ConverterBaseTrait;
     /** {@inheritdoc} */

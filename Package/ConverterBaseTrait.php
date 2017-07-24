@@ -35,7 +35,7 @@ trait ConverterBaseTrait
             "container",
             "flex-item"
         ],
-        "width" => "/^[0-9]+($|em$|px$|%$)/",
+        "width" => "/^([0-9]+($|em$|px$|%$)|auto$)/",
         "height" => "/^[0-9]+($|em$|px$|%$)/"
     ];
 
