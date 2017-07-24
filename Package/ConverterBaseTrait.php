@@ -25,6 +25,18 @@ trait ConverterBaseTrait
     protected static $aDefaultAttributeMapping = [
         "src" => "/^(https?:\/\/|\/)/",
         "alt" => "/.*/",
+        "media" => "/^\((min|max)-width: [1-9][0-9]{2,3}px\)$/",
+        "layout" => [
+            "nodisplay",
+            "fixed",
+            "responsive",
+            "fixed-height",
+            "fill",
+            "container",
+            "flex-item"
+        ],
+        "width" => "/^[0-9]+($|em$|px$|%$)/",
+        "height" => "/^[0-9]+($|em$|px$|%$)/"
     ];
 
     /**
